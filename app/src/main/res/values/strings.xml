@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Tarkov Timer</string>
+    <string name="next_button">Next</string>
+    <string name="back_button">Back</string>
+    <string name="lavatory_layout">Lavatory</string>
+    <string name="workbench_layout">Workbench</string>
+    <string name="medstation_layout">Medstation</string>
+    <string name="nutrition_layout">Nutrition Unit</string>
+    <string name="craft_text">Craft</string>
+    <string name="finish_text">Finished!</string>
+
+    <!--workbench texts-->
+    <string name="green_gunpowder_text">Green Gunpowder</string>
+    <string name="red_gunpowder_text">Red Gunpowder</string>
+    <string name="blue_gunpowder_text">Blue Gunpowder</string>
+    <!--end of workbench texts-->
+    <!--lavatory texts-->
+    <string name="bleach_text">Bleach</string>
+    <string name="mag_case_text">Magazine Case</string>
+    <string name="air_filter_text">Air Filter</string>
+    <!--end of lavatory texts-->
+    <!--medstation texts-->
+    <string name="ifak_text">IFAK</string>
+    <string name="ai2_text">AI2</string>
+    <string name="grizzly_text">Grizzly</string>
+    <!--end of medstation texts-->
+    <!--nutrition unit texts-->
+    <string name="wilston_text">Wilston Cigarettes</string>
+    <string name="sugar_text">Sugar</string>
+    <string name="lunchbox_text">Lunchbox</string>
+    <!--end of nutrition unit texts-->
+</resources>
