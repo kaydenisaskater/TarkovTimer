@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -23,8 +24,7 @@ public class LavatoryActivity extends AppCompatActivity {
     private int magCaseC;
     private int airFilterC;
 
-    public LavatoryActivity() {
-    }
+    private static final String TAG = "LavatoryActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,5 +113,34 @@ public class LavatoryActivity extends AppCompatActivity {
                 }.start();
             }
         });
+    }
+    @Override
+    public void onStart() {
+        super.onStart();
+        Log.d(TAG, "onStart() called");
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Log.d(TAG, "onResume() called");
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.d(TAG, "onPause() called");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.d(TAG, "onStop() called");
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, "onDestroy() called");
     }
 }
