@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id= "@+id/parent"
+    xmlns:tools = "http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context = ".MainActivity"
     android:gravity="center"
     android:orientation="vertical" >
 
@@ -19,18 +22,19 @@
         android:orientation="horizontal" >
 
         <TextView
-            android:id="@+id/green_gunpowder_textview"
+            android:id="@+id/blue_gunpowder_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/green_gunpowder_text" />
+            android:text="@string/blue_gunpowder_text" />
 
         <Button
-            android:id="@+id/green_gunpowder"
+            android:id="@+id/blue_gunpowder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/craft_text"
             android:layout_marginLeft="50dp"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="5dp"/>
+
     </LinearLayout>
 
     <LinearLayout
@@ -60,19 +64,18 @@
         android:orientation="horizontal" >
 
         <TextView
-            android:id="@+id/blue_gunpowder_textview"
+            android:id="@+id/green_gunpowder_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/blue_gunpowder_text" />
+            android:text="@string/green_gunpowder_text" />
 
         <Button
-            android:id="@+id/blue_gunpowder"
+            android:id="@+id/green_gunpowder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/craft_text"
             android:layout_marginLeft="50dp"
-            android:layout_marginBottom="5dp"/>
-
+            android:layout_marginBottom="20dp"/>
     </LinearLayout>
 
     <LinearLayout

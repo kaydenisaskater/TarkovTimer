@@ -37,7 +37,10 @@ public class MedstationActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //go to nutrition activity
                 Intent intent = new Intent(MedstationActivity.this, NutritionActivity.class);
+                finish();
+                overridePendingTransition(0,0);
                 startActivity(intent);
+                overridePendingTransition(0,0);
             }
         });
 
@@ -47,7 +50,10 @@ public class MedstationActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //go to lavatory activity
                 Intent intent = new Intent(MedstationActivity.this, LavatoryActivity.class);
+                finish();
+                overridePendingTransition(0,0);
                 startActivity(intent);
+                overridePendingTransition(0,0);
             }
         });
 
@@ -63,7 +69,7 @@ public class MedstationActivity extends AppCompatActivity {
                         ai2C++;
                     }
                     public void onFinish(){
-                        Toast.makeText(MedstationActivity.this, messageResId, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MedstationActivity.this, "AI2 Finished!", Toast.LENGTH_SHORT).show();
                         mAI2Button.setText(R.string.craft_text);
                         mGrizzlyButton.setEnabled(true);
                         mIFAKButton.setEnabled(true);
@@ -84,7 +90,7 @@ public class MedstationActivity extends AppCompatActivity {
                         ifakC++;
                     }
                     public void onFinish(){
-                        Toast.makeText(MedstationActivity.this, messageResId, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MedstationActivity.this, "IFAK Finished!", Toast.LENGTH_SHORT).show();
                         mIFAKButton.setText(R.string.craft_text);
                         mGrizzlyButton.setEnabled(true);
                         mAI2Button.setEnabled(true);
@@ -105,7 +111,7 @@ public class MedstationActivity extends AppCompatActivity {
                         grizzlyC++;
                     }
                     public void onFinish(){
-                        Toast.makeText(MedstationActivity.this, messageResId, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MedstationActivity.this, "Grizzly Finished!", Toast.LENGTH_SHORT).show();
                         mGrizzlyButton.setText(R.string.craft_text);
                         mIFAKButton.setEnabled(true);
                         mAI2Button.setEnabled(true);

@@ -37,7 +37,10 @@ public class LavatoryActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //go to medstation activity
                 Intent intent = new Intent(LavatoryActivity.this, MedstationActivity.class);
+                finish();
+                overridePendingTransition(0,0);
                 startActivity(intent);
+                overridePendingTransition(0,0);
             }
         });
 
@@ -47,7 +50,10 @@ public class LavatoryActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //go to workbench activity
                 Intent intent = new Intent(LavatoryActivity.this, MainActivity.class);
+                finish();
+                overridePendingTransition(0,0);
                 startActivity(intent);
+                overridePendingTransition(0,0);
             }
         });
 
@@ -63,7 +69,7 @@ public class LavatoryActivity extends AppCompatActivity {
                         magCaseC++;
                     }
                     public void onFinish(){
-                        Toast.makeText(LavatoryActivity.this, messageResId, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LavatoryActivity.this, "Mag Case Finished!", Toast.LENGTH_SHORT).show();
                         mMagCaseButton.setText(R.string.craft_text);
                         mAirFilterButton.setEnabled(true);
                         mBleachButton.setEnabled(true);
@@ -84,7 +90,7 @@ public class LavatoryActivity extends AppCompatActivity {
                         airFilterC++;
                     }
                     public void onFinish(){
-                        Toast.makeText(LavatoryActivity.this, messageResId, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LavatoryActivity.this, "Air Filter Finished!", Toast.LENGTH_SHORT).show();
                         mAirFilterButton.setText(R.string.craft_text);
                         mMagCaseButton.setEnabled(true);
                         mBleachButton.setEnabled(true);
@@ -105,7 +111,7 @@ public class LavatoryActivity extends AppCompatActivity {
                         bleachC++;
                     }
                     public void onFinish(){
-                        Toast.makeText(LavatoryActivity.this, messageResId, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LavatoryActivity.this, "Bleach Finished!", Toast.LENGTH_SHORT).show();
                         mBleachButton.setText(R.string.craft_text);
                         mMagCaseButton.setEnabled(true);
                         mAirFilterButton.setEnabled(true);

@@ -1,5 +1,6 @@
 package android.bignerdranch.tarkovtimer;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 
@@ -35,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
 
+    private int view = R.layout.activity_main;
+    TextView textView;
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +54,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //go to lavatory activity
                 Intent intent = new Intent(MainActivity.this, LavatoryActivity.class);
+                finish();
+                overridePendingTransition(0, 0);
                 startActivity(intent);
+                overridePendingTransition(0,0);
             }
         });
 
@@ -59,7 +67,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //go to nutrition unit activity
                 Intent intent = new Intent(MainActivity.this, NutritionActivity.class);
+                finish();
+                overridePendingTransition(0,0);
                 startActivity(intent);
+                overridePendingTransition(0,0);
             }
         });
 
@@ -75,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                         greenCounter++;
                     }
                     public void onFinish(){
-                        Toast.makeText(MainActivity.this, messageResId, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Green Gunpowder Finished!", Toast.LENGTH_SHORT).show();
                         mGreenGunpowderButton.setText(R.string.craft_text);
                         mRedGunpowderButton.setEnabled(true);
                         mBlueGunpowderButton.setEnabled(true);
@@ -96,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
                         redCounter++;
                     }
                     public void onFinish(){
-                        Toast.makeText(MainActivity.this, messageResId, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Red Gunpowder Finished!", Toast.LENGTH_SHORT).show();
                         mRedGunpowderButton.setText(R.string.craft_text);
                         mBlueGunpowderButton.setEnabled(true);
                         mGreenGunpowderButton.setEnabled(true);
@@ -117,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
                         blueCounter++;
                     }
                     public void onFinish(){
-                        Toast.makeText(MainActivity.this, messageResId, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Blue Gunpowder Finished!", Toast.LENGTH_SHORT).show();
                         mBlueGunpowderButton.setText(R.string.craft_text);
                         mRedGunpowderButton.setEnabled(true);
                         mGreenGunpowderButton.setEnabled(true);

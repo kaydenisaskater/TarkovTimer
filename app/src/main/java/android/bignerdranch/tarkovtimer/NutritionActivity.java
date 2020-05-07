@@ -36,7 +36,10 @@ public class NutritionActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //go back to main activity
                 Intent intent = new Intent(NutritionActivity.this, MainActivity.class);
+                finish();
+                overridePendingTransition(0,0);
                 startActivity(intent);
+                overridePendingTransition(0,0);
             }
         });
 
@@ -46,7 +49,10 @@ public class NutritionActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //go to medstation activity
                 Intent intent = new Intent(NutritionActivity.this, MedstationActivity.class);
+                finish();
+                overridePendingTransition(0,0);
                 startActivity(intent);
+                overridePendingTransition(0,0);
             }
         });
 
@@ -62,7 +68,7 @@ public class NutritionActivity extends AppCompatActivity {
                         wilstonC++;
                     }
                     public void onFinish(){
-                        Toast.makeText(NutritionActivity.this, messageResId, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(NutritionActivity.this, "Wilston Cigarettes Finished!", Toast.LENGTH_SHORT).show();
                         mWilstonButton.setText(R.string.craft_text);
                         mSugarButton.setEnabled(true);
                         mLunchBoxButton.setEnabled(true);
@@ -83,7 +89,7 @@ public class NutritionActivity extends AppCompatActivity {
                         lunchBoxC++;
                     }
                     public void onFinish(){
-                        Toast.makeText(NutritionActivity.this, messageResId, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(NutritionActivity.this, "Lunchbox Finished!", Toast.LENGTH_SHORT).show();
                         mLunchBoxButton.setText(R.string.craft_text);
                         mSugarButton.setEnabled(true);
                         mWilstonButton.setEnabled(true);
@@ -98,13 +104,13 @@ public class NutritionActivity extends AppCompatActivity {
             public void onClick(View v){
                 new CountDownTimer(10000, 1000){
                     public void onTick(long millisUntilFinished){
-                        mSugarButton.setText("Time remainging: " + millisUntilFinished / 1000);
+                        mSugarButton.setText("Time remaining: " + millisUntilFinished / 1000);
                         mLunchBoxButton.setEnabled(false);
                         mWilstonButton.setEnabled(false);
                         sugarC++;
                     }
                     public void onFinish(){
-                        Toast.makeText(NutritionActivity.this, messageResId, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(NutritionActivity.this, "Sugar Finished!", Toast.LENGTH_SHORT).show();
                         mLunchBoxButton.setText(R.string.craft_text);
                         mSugarButton.setEnabled(true);
                         mWilstonButton.setEnabled(true);
